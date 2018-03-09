@@ -39,11 +39,38 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Use devise as authentication
   gem 'devise'
+  # Use pundit as authorization
   gem 'pundit'
+  # Use jquery-rails as jquery
+  gem 'jquery-rails'
+  # Use responders as respond format
   gem 'responders'
+  # Use rspec as test framework
   gem 'rspec-rails'
+  # Use bootstrap-sass as bootstrap
   gem 'bootstrap-sass'
+  # Use jquery-rails as jquery
+  gem 'jquery-rails'
+  # Use better_errors as errors display
+  gem 'better_errors'
+  # Use simplecov as code coverage
+  gem 'simplecov'
+  # Use pry-rails as terminal
+  gem 'pry-rails'
+  # Use pry-byebug as debug
+  gem 'pry-byebug'
+  # UIse rubocop as code coverage
+  gem 'rubocop'
+  # Use shoulda to make test easy to read and to fingers
+  gem 'shoulda'
+  # Use cucumer as acceptance test
+  gem 'cucumber'
+  # Use guard as automation 
+  gem 'guard'
+  # Use ransack to automate search object based
+  gem 'ransack'
 end
 
 group :development do

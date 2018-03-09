@@ -1,2 +1,163 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section id='presenter' class='jumbotron'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<ul class='list-unstyled text-center'>
+					<li><h1>ALVOROÇO FILMES</h1></li>
+					<li><p>Acompanhe nossas produções.</p></li>
+					<ul class='list-unstyled list-inline'>
+						<li><%= link_to 'FILMES', '', class: 'btn btn-primary btn-lg top' %></li>
+						<li><%= link_to 'CONTATO', '', class: 'btn btn-primary btn-lg top' %></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id='about'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<ul class='breadcrumb'>
+					<li><%= link_to 'Home', root_path %></li>
+				</ul>
+
+				<ul class="list-unstyled">
+					<li><h1><i class='glyphicon glyphicon-search'></i> ALVOROÇO</h1></li>
+					<li><p>Conheça a alvoroço filmes</p></li>
+					<li><hr></li>
+				</ul>
+
+				<div class='row'>
+					<div class='col-md-6'>
+						<ul class='list-unstyled text-center'>
+							<li><h2><i class='glyphicon glyphicon-search'></i></h2></li>
+							<li><h3><strong>VT PUBLICITÁRIO</strong></h3></li>
+						</ul>
+					</div>
+					<div class='col-md-6'>
+						<ul class='list-unstyled text-center'>
+							<li><h2><i class='glyphicon glyphicon-search'></i></h2></li>
+							<li><h3><strong>PROJETOS CINEMA E TELEVISÃO</strong></h3></li>
+						</ul>
+					</div>
+					<div class='col-md-6'>
+						<ul class='list-unstyled text-center'>
+							<li><h2><i class='glyphicon glyphicon-search'></i></h2></li>
+							<li><h3><strong>AUDIO VISUAL EM GERAL</strong></h3></li>
+						</ul>
+					</div>
+					<div class='col-md-6'>
+						<ul class='list-unstyled text-center'>
+							<li><h2><i class='glyphicon glyphicon-search'></i></h2></li>
+							<li><h3><strong>VT PUBLICITÁRIO</strong></h3></li>
+						</ul>
+					</div>
+					<div class='col-md-4 col-md-offset-4'>
+						<ul class='list-unstyled text-center'>
+							<li><h2><i class='glyphicon glyphicon-search'></i></h2></li>
+							<li><h3><strong>VT PUBLICITÁRIO</strong></h3></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class='row'>
+					<div class='col-md-12'>
+						<h3><strong>1999</strong></h3>
+						<p>Evandro Berlesi engressou no universo artistico em 1999 através
+						do teatro, destacando-se como ator em diversas montagens cênicas.
+						Descobriu sua habilidade de escrever ainda na infancia, quando criava
+						pequenos roteiros de filmes sonhando em algum dia trabalhar com cinema.
+						</p>
+					</div>
+					<div class='col-md-12'>
+						<h3><strong>2005</strong></h3>
+						<p>Em 2005, com o curta metragem O japônes da Coreia (Direção de
+						Rodrigo Castelhano), seu 5 roteiro filmado. Evandro destacou-se na função de roteirista após acumular 10 premios em festivais nacionais, incluindo de melhor roteiro.</p>
+					</div>
+					<div class='col-md-12'>
+						<h3><strong>2008</strong></h3>
+						<p>Em 2008 foi o grande vencedor do filme</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='projects'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<ul class="list-unstyled text-center">
+					<li><h1>PROJETOS</h1></li>
+					<li><p>Conheça nossos projetos</p></li>
+					<li><hr></li>
+				</ul>
+				
+				<%= render @projects %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='newsletter' class='jumbotron'>
+	<div class='container'>
+	   <div class='row'>
+	   	 <div class='col-md-12'>
+	  		<%= render partial: 'newsletter/form' %>		
+	  	 </div>
+	   </div>
+	</div>
+</section>
+
+<section id='movies'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<ul class="list-unstyled text-center">
+					<li><h1>FILMES</h1></li>
+					<li><p>Conheça nossos filmes</p></li>
+					<li><hr></li>
+				</ul>
+
+				<%= render @movies %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='contact'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<ul class='list-unstyled text-center'>
+					<li><h1><i class='glpyhicon glyphicon-search'></i> CONTATO</h1></li>
+				    <li><p>Envie-nos sua mensagem, responderemos o mais rápido possivel.</p></li>
+				    <li><br></li>
+				</ul>
+
+				<div class='col-md-4'>
+					<h3><i class='glyphicon glyphicon-search'></i> 
+					CONTATO <small> Evandro Berlesi</small></h3>
+					<ul class='list-unstyled'>
+						<li><p><i class='glyphicon glyphicon-search'></i> +55 (51) 3442 - 5003</p></li>
+						<li><p><i class='glyphicon glyphicon-search'></i> +55 (51) 9132 - 8199</p></li>
+					</ul>
+					<h3><i class='glyphicon glyphicon-search'></i> EMAIL</h3>
+					<ul class='list-unstyled'>
+						<li><p><i class='glyphicon glyphicon-search'></i> evandro@alvoroco.com</p></li>
+						<li><p><i class='glyphicon glyphicon-search'></i> alvoroco@alvoroco.com.br</p></li>
+					</ul>	
+				</div>
+
+				<div class='col-md-8'>
+				   <%= render partial: 'contact/form' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

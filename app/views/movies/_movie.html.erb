@@ -1,0 +1,12 @@
+<div class='col-md-4'>
+  <div class='panel panel-default padding'>
+	<ul class='list-unstyled'>
+		<li><h4><%= link_to movie.name.upcase, ''%></h4></li>
+		<li><p><%= truncate(movie.description, length: 30) %></p></li>
+		<ul class='list-unstyled list-inline'>
+			<li><%= link_to 'Assistir', '', class: 'btn btn-default btn-lg top' %></li>
+			<li><%= link_to 'Compartilhar', '', class: 'btn btn-primary btn-lg top' %></li>
+		</ul>
+	</ul>
+  </div>
+</div>

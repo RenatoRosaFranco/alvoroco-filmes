@@ -12,4 +12,37 @@
  *
  *= require_tree .
  *= require_self
- */
+ */ 
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+body {
+ position: relative;
+ font-size: 16px;
+ font-family: 'ubuntu', arial, sans-serif, serif;
+}
+
+.padding {
+ position: relative;
+ padding: 10px;
+}
+
+footer {
+ position: relative;
+ margin-top: 70px;
+ margin-bottom: 0px !important;
+ padding-bottom: 0px;
+}
+
+@mixin form-base {
+ form {
+  input[type=email], input[type=text]{
+   position: relative;
+   height: 40px;
+  }
+  textarea {
+   position: relative;
+   height: 140px;	
+  } 
+ }
+}
