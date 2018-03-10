@@ -1,9 +1,10 @@
 module Dashboard 
 	class MoviesController < HomeController
+		respond_to   :html, :json, :js
 		before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
 		def index
-		  @movie = Movies.all
+		  @movies = Movies.all
 		end
 
 		def new
@@ -11,6 +12,7 @@ module Dashboard
 		end
 
 		def show
+		  respond_with(@movie)
 		end
 
 		def create
@@ -20,11 +22,12 @@ module Dashboard
 		end
 
 		def edit
-
+		  respond_with(@movie)
 		end
 
 		def update
 		  @movie.update(movie_params)
+		  @movie.save
 		  respond_with(:dashboard, @movie)
 		end
 

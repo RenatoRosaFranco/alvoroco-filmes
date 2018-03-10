@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
-  	@projects = Project.all 
-  	@movies = Movie.all
+  	@newsletter = Newsletter.new
+  	@projects = Project.friendly.all 
+  	@movies = Movie.friendly.all
   	@contact = Contact.new
   end
 end

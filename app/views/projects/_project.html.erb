@@ -1,8 +1,11 @@
 <div class='col-md-4'>
  <div class='panel panel-default padding'>
 	<ul class='list-unstyled'>
-		<li><h4><%= link_to project.name.upcase, '' %></h4></li>
+		<li><h4><%= link_to project.name.upcase, project_path(project) %></h4></li>
 		<li><p><%= truncate(project.description, length: 30) %></p></li>
-	 </ul>
+		<ul class='list-unstyled'>
+			<li><%= link_to 'VER MAIS', project_path(project), class: 'btn btn-primary btn-lg top' %></li>
+		</ul>
+	</ul>
  </div>
 </div>

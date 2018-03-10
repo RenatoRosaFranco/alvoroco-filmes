@@ -1,0 +1,46 @@
+<div id='presenter' class='jumbotron'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-12'>
+			<ul class='breadcrumb'>
+				<li><%= link_to 'Home', root_path %></li>
+				<li><%= link_to 'Blog', blog_posts_path %></li>
+				<li><%= link_to @post.title, blog_posts_path(@post) %></li>
+			</ul>
+			
+			<div class='row'>
+				<div>
+					<h1><%= @post.title %><br>
+						<small><%= @post.description %></small>
+					</h1>
+					<p>Postado por <%= link_to @post.user.email %>
+						em <%= link_to time_ago_in_words(@post.created_at) %>
+					</p>
+					<hr>
+				</div>
+
+				<div>
+					<p><%= @post.content.html_safe %></p>
+					<hr>
+				</div>
+
+				<div>
+					<label>TAGS:</label></div>
+					<% @post.tags.split(/\s/).each do |tag| %>
+						<button class='btn btn-default'><%= tag %></button>
+					<% end %>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<% provide :title, 'Projetos' %>
+
+<div id='presenter' class='jumbotron'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-12'>
+			<ul class='breadcrumb'>
+			   <li><%= link_to 'Home',   root_path %></li>
+			   <li><%= link_to 'Projetos', projects_path %></li>
+			</ul>
+
+			<%= render @projects %>
+			<%= pagination @projects %>
+
+		</div>
+	</div>
+</div>

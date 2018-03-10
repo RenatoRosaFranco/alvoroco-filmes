@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require bootstrap
+//= require froala_editor.min.js
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $('.editor').froalaEditor();
+});

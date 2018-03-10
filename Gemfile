@@ -57,6 +57,10 @@ group :development, :test do
   gem 'better_errors'
   # Use simplecov as code coverage
   gem 'simplecov'
+  # Use friendly_id as friendly_url
+  gem 'friendly_id'
+  # Use rails-erd to generate ERD diagram
+  gem 'rails-erd'
   # Use pry-rails as terminal
   gem 'pry-rails'
   # Use pry-byebug as debug
@@ -65,12 +69,23 @@ group :development, :test do
   gem 'rubocop'
   # Use shoulda to make test easy to read and to fingers
   gem 'shoulda'
+  # Use will_paginate as paginate
+  gem 'will_paginate'
+  gem 'bootstrap-will_paginate'
+  # Use wysiwyg-rails as html text editor
+  gem 'wysiwyg-rails'
+  # Use a font-awesome-rails as  awesome fonts
+  gem 'font-awesome-rails'
   # Use cucumer as acceptance test
   gem 'cucumber'
   # Use guard as automation 
   gem 'guard'
   # Use ransack to automate search object based
   gem 'ransack'
+  # Use therubyracer to compile js 
+  gem 'therubyracer'
+  # Use meta_tags as SEO
+  gem 'meta_tags'
 end
 
 group :development do

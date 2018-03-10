@@ -1,13 +1,16 @@
+<% provide :title, "Home" %>
+
 <section id='presenter' class='jumbotron'>
 	<div class='container'>
 		<div class='row'>
 			<div class='col-md-12'>
 				<ul class='list-unstyled text-center'>
-					<li><h1>ALVOROÇO FILMES</h1></li>
+					<li><h1><i class='glyphicon glyphicon-search'></i> 
+					<br> ALVOROÇO FILMES</h1></li>
 					<li><p>Acompanhe nossas produções.</p></li>
 					<ul class='list-unstyled list-inline'>
-						<li><%= link_to 'FILMES', '', class: 'btn btn-primary btn-lg top' %></li>
-						<li><%= link_to 'CONTATO', '', class: 'btn btn-primary btn-lg top' %></li>
+						<li><%= link_to 'FILMES', movies_path, class: 'btn btn-primary btn-lg top' %></li>
+						<li><%= link_to 'CONTATO', '#contact', class: 'btn btn-primary btn-lg top' %></li>
 					</ul>
 				</ul>
 			</div>

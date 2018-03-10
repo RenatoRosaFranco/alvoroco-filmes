@@ -1,0 +1,14 @@
+<div class='col-md-4'>
+	<div class='panel panel-default'>
+		<div class='jumbotron' style='margin-bottom: -20px; height: 140px;'></div>
+		<ul class='list-unstyled padding'>
+			<li><h3><%= link_to post.title, blog_post_path(post) %></h3></li>
+			<li><small><%=  truncate(post.description, length: 30) %></small></li>
+			<li><p><%= truncate(post.content, length: 90) %></p></li>
+			<ul class='list-unstyled list-inline'>
+				<li><%= link_to 'VISUALIZAR', blog_post_path(post), class: 'btn btn-primary btn-lg top' %></li>
+				<li><%= link_to 'COMPARTILHAR', '', class: 'btn btn-default btn-lg top' %></li>
+			</ul>
+		</ul>
+	</div>
+</div>

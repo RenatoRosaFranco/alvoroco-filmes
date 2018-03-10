@@ -22,7 +22,7 @@ class Contact < Object
 			  length: { minimum: 3, maximum: 30 }
     
     validates :phone,
-    		  presnece: true,
+    		  presence: true,
     		  uniqueness: false,
     		  allow_blank: false,
     		  length: { minimum: 3, maximum: 15 }

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get 'home/index'
     resources :projects 
     resources :movies
+    resources :posts
+    resources :newsletters
   end
 
   # Authentication
@@ -15,8 +17,16 @@ Rails.application.routes.draw do
   # Application
   # @implemented
   root to: 'home#index'
-  resource :contact, only: %i{create}
-  resource :newsletter, only: %i{create}
+  resource  :contact, only: %i{create}
+  resource  :newsletter, only: %i{create}
+  resources :movies, only: %i{index show}
+  resources :projects, only: %i{index show}
+  
+  # Blog namespace
+  # @implemented
+  namespace :blog do 
+     resources :posts, only: [:index, :show]
+  end
 
   # Application
   # @implemented 

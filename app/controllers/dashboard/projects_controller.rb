@@ -12,12 +12,17 @@ module Dashboard
 		end
 
 		def show
+		   respond_with(@project)
 		end
 
 		def create
 		   @project = current_user.projects.build(project_params)
 		   @project.save 
 		   respond_with(:dashboard, @project)
+		end
+
+		def edit
+		   respond_with(@project)
 		end
 
 		def update

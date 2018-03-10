@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alvoroco | Dashboard %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ 	<style type="text/css"><%= yield :css %></style>
+ 	<script type="text/javascript"><%= yield :js %></script>
+  </head>
+
+  <body class='<%= controller.controller_name %>'
+  	data-spy='scroll' data-ng-controller='ApplicationController as appCtrl'>
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
+    <%= render partial: 'layouts/footer' %>
+  </body>
+</html>

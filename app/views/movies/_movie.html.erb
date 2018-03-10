@@ -4,7 +4,8 @@
 		<li><h4><%= link_to movie.name.upcase, ''%></h4></li>
 		<li><p><%= truncate(movie.description, length: 30) %></p></li>
 		<ul class='list-unstyled list-inline'>
-			<li><%= link_to 'Assistir', '', class: 'btn btn-default btn-lg top' %></li>
+			<li><%= link_to 'Assistir', movie_path(movie), 
+			class: 'btn btn-default btn-lg top' %></li>
 			<li><%= link_to 'Compartilhar', '', class: 'btn btn-primary btn-lg top' %></li>
 		</ul>
 	</ul>

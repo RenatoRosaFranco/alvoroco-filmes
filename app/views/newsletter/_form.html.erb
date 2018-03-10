@@ -1,4 +1,7 @@
-<%= form_for(:newsletter, {url: newsletter_path, method: :post}) do |f|%>
+<%= form_for(@newsletter, {url: newsletter_path, method: :post}) do |f|%>
+	
+	<%= has_errors?(@newsletter) %>
+
 	<div class='field'>
 	 <div class='col-md-4'>
 		<%= f.label :name %>
