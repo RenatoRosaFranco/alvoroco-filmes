@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resource  :contact, only: %i{create}
   resource  :newsletter, only: %i{create}
+  get       'newsletter/:token' => 'newsletter#cancel', as: :cancel_newsletter
   resources :movies, only: %i{index show}
   resources :projects, only: %i{index show}
   

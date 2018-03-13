@@ -16,11 +16,13 @@ class Newsletter < ApplicationRecord
 	def signup 
 	  self.status = true 
 	  self.token = SecureRandom.urlsafe_base64
+	  NewsletterMailer.signup(self).deliver_now
 	end
 
 	def cancel
 	  self.status = false 
 	  self.token = nil
+	  NewsletterMailer.cancel(self).deliver_now
 	end
 
 	# Validates

@@ -5,11 +5,16 @@ class Contact < Object
 
 	attr_accessor :name, :phone, :email, :message 
 
-	def initialize(params: {})
+	def initialize(params = {})
 	  @name = params[:name]
 	  @phone = params[:phone]
 	  @email = params[:email]
 	  @message = params[:message]
+	end
+
+	def sendEmail
+	  ContactMailer.sended(self).deliver_now
+	  ContactMailer.received(self).deliver_now
 	end
 
 	def persisted?
