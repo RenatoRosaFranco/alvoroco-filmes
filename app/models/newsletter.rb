@@ -11,6 +11,13 @@ class Newsletter < ApplicationRecord
 	# @implemented
 	before_create :signup, if: :valid?
 
+	# Scopes 
+	# @implemented
+	scope :find_by_email, ->(email) { where(email: email) }
+	scope :find_by_token, ->(token) { where(token: token) }
+	scope :registered, -> { where(status: true) }
+	scope :unregistered, -> { where(status: false) } 
+
 	# Methods
 	# @implmented
 	def signup 

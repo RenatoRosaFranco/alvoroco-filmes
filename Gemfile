@@ -95,6 +95,12 @@ group :development, :test do
   gem 'carrierwave'
   # Use recapcha as capcha
   gem 'recaptcha', require: 'recaptcha/rails'
+  # Use capistrano set as deploy
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma'
 end
 
 group :development do
