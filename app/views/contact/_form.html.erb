@@ -8,7 +8,7 @@
 		<div class='input-group'>
 		<div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
 		<%= f.text_field :name, class: 'form-control', required: 'required',
-		placeholder: 'Digite o nome', autocomplete: 'off' %>
+		placeholder: 'Digite o nome', autocomplete: 'off', style: 'height: 44px;' %>
 		</div>
 	 </div>
 	</div>
@@ -18,7 +18,7 @@
 		<div class='input-group'>
 		<div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
 		<%= f.text_field :phone, class: 'form-control', required: 'required',
-		placeholder: 'Digite o telefone', autocomplete: 'off' %>
+		placeholder: 'Digite o telefone', autocomplete: 'off', style: 'height: 44px;' %>
 		</div>
 	  </div>
 	</div>
@@ -28,7 +28,7 @@
 		<div class='input-group'>
 		<div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
 		<%= f.email_field :email, class: 'form-control', required: 'required',
-		placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+		placeholder: 'Digite o e-mail', autocomplete: 'off', style: 'height: 44px;' %>
 		</div>
 	 </div>
 	</div>
@@ -36,12 +36,12 @@
 	  <div class='col-md-12'>
 		<%= f.label :message %>
 		<%= f.text_area :message, class: 'form-control', required: 'required',
-		placeholder: 'Escreva sua mensagem', autocomplete: 'off' %>
+		placeholder: 'Escreva sua mensagem', autocomplete: 'off', style: 'height: 140px; resize: none;' %>
 	  </div>
 	</div>
 	<div class='field'>
 	  <div class='col-md-12'>
-		<%= f.submit 'Enviar mensagem', class: 'btn btn-primary btn-lg top' %>
+		<%= f.submit 'Enviar mensagem', class: 'btn btn-primary btn-lg top', style: 'text-transform: uppercase;' %>
 	  </div>
 	</div>
 <% end %>

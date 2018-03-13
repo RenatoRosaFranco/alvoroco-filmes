@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
@@ -82,10 +81,20 @@ group :development, :test do
   gem 'guard'
   # Use ransack to automate search object based
   gem 'ransack'
+  # Use sidekiq as background jobs
+  gem 'sidekiq'
+  # Use whenever to cronjobs
+  gem 'whenever'
   # Use therubyracer to compile js 
   gem 'therubyracer'
   # Use meta_tags as SEO
   gem 'meta_tags'
+  # Use brakeman as security
+  gem 'brakeman'
+  # Use carrierwave as uploader
+  gem 'carrierwave'
+  # Use recapcha as capcha
+  gem 'recaptcha', require: 'recaptcha/rails'
 end
 
 group :development do

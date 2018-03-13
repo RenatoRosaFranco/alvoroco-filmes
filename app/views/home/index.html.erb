@@ -96,12 +96,19 @@
 		<div class='row'>
 			<div class='col-md-12'>
 				<ul class="list-unstyled text-center">
-					<li><h1>PROJETOS</h1></li>
+					<li><h1><i class='glyphicon glyphicon-search'></i>
+					<br> PROJETOS</h1></li>
 					<li><p>Conheça nossos projetos</p></li>
 					<li><hr></li>
 				</ul>
 				
 				<%= render @projects %>
+
+				<div class='row'>
+					<div class='col-md-4 col-md-offset-4'>
+						<%= link_to 'VER MAIS', projects_path, class: 'btn btn-primary btn-lg top' %>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -122,12 +129,19 @@
 		<div class='row'>
 			<div class='col-md-12'>
 				<ul class="list-unstyled text-center">
-					<li><h1>FILMES</h1></li>
-					<li><p>Conheça nossos filmes</p></li>
+					<li><h1><i class='glyphicon glyphicon-search'></i><br> FILMES</h1></li>
+					<li><p>Conheça todos os nossos filmes</p></li>
 					<li><hr></li>
 				</ul>
 
 				<%= render @movies %>
+
+			   <div class='row'>
+				 <div class='col-md-4 col-md-offset-4'>
+				   <%= link_to 'VER TODOS', movies_path, class: 'btn btn-primary btn-lg top' %>
+				 </div>
+			   </div>
+
 			</div>
 		</div>
 	</div>
@@ -138,7 +152,7 @@
 		<div class='row'>
 			<div class='col-md-12'>
 				<ul class='list-unstyled text-center'>
-					<li><h1><i class='glpyhicon glyphicon-search'></i> CONTATO</h1></li>
+					<li><h1><i class='glpyhicon glyphicon-search'></i></br> CONTATO</h1></li>
 				    <li><p>Envie-nos sua mensagem, responderemos o mais rápido possivel.</p></li>
 				    <li><br></li>
 				</ul>

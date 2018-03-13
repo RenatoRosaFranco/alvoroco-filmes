@@ -1,13 +1,20 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
 
   # Dashboard 
   # @implemented
   namespace :dashboard do
     get 'home/index'
+    resources :categories
     resources :projects 
     resources :movies
     resources :posts
     resources :newsletters
+    resources :users
+    # Monitoring 
+    # @implemented
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   # Authentication
@@ -27,7 +34,7 @@ Rails.application.routes.draw do
   namespace :blog do 
      resources :posts, only: [:index, :show]
   end
-
+  
   # Application
   # @implemented 
   namespace :api, constraint: { subdomain: 'api '}  do 

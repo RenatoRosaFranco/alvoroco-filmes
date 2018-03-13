@@ -24,6 +24,7 @@ body {
  position: relative;
  font-size: 16px;
  font-family: 'ubuntu', arial, sans-serif, serif;
+ background-color: #1e1e1e;
 }
 
 .padding {
@@ -31,9 +32,18 @@ body {
  padding: 10px;
 }
 
+.header-avatar {
+ position: relative;
+ width: 34px;
+ height: 34px;
+ border-radius: 34px;
+ margin-top: 8px;
+}
+
 .navbar-default {
  position: relative;
- background-color: #eee !important;
+ background-color: #000 !important;
+ border: 1px solid #000 !important;
 }
 
 .top {
@@ -46,7 +56,30 @@ body {
  margin-top: -20px;
 }
 
+#contact {
+ position: relative;
+ color: #FFF;
 
+ form{
+  input[type=text], input[type=email], textarea{
+   position: relative;
+   background-color: #000 !important;
+   border: 1px solid #000 !important;
+   -::-webkit-input-placeholder {
+     text-transform: uppercase;
+   }
+  }
+  input[type=submit]{
+   position: relative;
+   background-color: #000;
+   border: 1px solid #999;
+   text-tranform: uppercase;
+   font-weight: bold;
+   border-radius: 0px;
+   padding: 15px;
+  }
+ }
+}
 
 footer {
  position: relative;

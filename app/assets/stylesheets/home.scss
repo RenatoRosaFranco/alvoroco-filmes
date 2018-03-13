@@ -4,4 +4,10 @@
 
 .home {
  position: relative;
+
+ header, #presenter, footer {
+  position: relative;
+  background-color: #000 !important;
+ }
+
 }
